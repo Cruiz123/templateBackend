@@ -31,6 +31,7 @@ export default async (app, routes = []) => {
   app.use(morgan('dev'))
   app.use(json())
   app.use(urlencoded({ extended: true }))
+
   // Define routes
   for (const route of routes) {
     const { path = null, controller = null } = route

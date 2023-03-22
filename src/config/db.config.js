@@ -13,9 +13,13 @@ const config = {
     password,
     database,
     options: {
-      dialect,
       host,
+      port: 1433,
+      dialect,
       dialectOptions: {
+        options: {
+          encrypt: false
+        },
         multipleStatements: true
       },
       logging: false,
